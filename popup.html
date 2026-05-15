@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bright Standard</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  width: 300px;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #1A1410;
+  color: #F7F4EF;
+  font-size: 13px;
+}
+.header {
+  display: flex; align-items: center; gap: 8px;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(242,201,76,0.12);
+}
+.header svg { flex-shrink: 0; }
+.header h1 {
+  font-size: 14px; font-weight: 700; letter-spacing: -0.01em;
+}
+.header p {
+  font-size: 10px; color: rgba(247,244,239,0.4);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-top: 1px;
+}
+.body { padding: 16px; }
+.status {
+  font-size: 12px; color: rgba(247,244,239,0.5);
+  line-height: 1.6; margin-bottom: 14px;
+}
+.status strong { color: #F2C94C; font-weight: 600; }
+.actions { display: flex; flex-direction: column; gap: 8px; }
+.btn {
+  display: block; padding: 10px 16px; text-align: center;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; text-decoration: none;
+  border-radius: 2px; cursor: pointer; border: none;
+  transition: all 0.15s; font-family: inherit;
+}
+.btn-primary { background: #F2C94C; color: #1A1410; }
+.btn-primary:hover { background: #E0B83A; }
+.btn-secondary {
+  background: none; color: rgba(247,244,239,0.5);
+  border: 1px solid rgba(247,244,239,0.1);
+}
+.btn-secondary:hover { border-color: rgba(247,244,239,0.3); color: #F7F4EF; }
+.divider {
+  border: none; border-top: 1px solid rgba(247,244,239,0.06);
+  margin: 12px 0;
+}
+.footer {
+  padding: 10px 16px;
+  font-size: 9px; color: rgba(247,244,239,0.2);
+  text-transform: uppercase; letter-spacing: 0.08em;
+  border-top: 1px solid rgba(247,244,239,0.05);
+}
+.not-on-tpt {
+  font-size: 12px; color: rgba(247,244,239,0.4);
+  padding: 4px 0 8px;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+    <circle cx="14" cy="14" r="13" stroke="#F2C94C" stroke-width="1.5"/>
+    <path d="M8 14l4.5 4.5 7.5-7.5" stroke="#F2C94C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <div>
+    <h1>Bright Standard</h1>
+    <p>Five Checks · Lesson Quality</p>
+  </div>
+</div>
+
+<div class="body">
+  <div id="on-tpt-view" style="display:none">
+    <div class="status">
+      You're on a TPT product page. The <strong>Five Checks score</strong> is shown directly on the page.
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" id="view-bs-btn" href="https://thebrightstandard.com" target="_blank">
+        Find certified alternatives
+      </a>
+    </div>
+  </div>
+
+  <div id="not-tpt-view" style="display:none">
+    <div class="not-on-tpt">
+      Navigate to a <strong style="color:#F2C94C">teacherspayteachers.com/Product/</strong> page to see the Five Checks score.
+    </div>
+    <hr class="divider"/>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://thebrightstandard.com/hub" target="_blank">
+        Browse certified lessons →
+      </a>
+      <a class="btn btn-secondary" href="https://thebrightstandard.com/creators" target="_blank">
+        Get your content certified
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">Bright Standard · Five Checks Framework</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
